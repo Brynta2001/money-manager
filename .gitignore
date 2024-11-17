@@ -36,11 +36,6 @@ out/
 ### VS Code ###
 .vscode/
 
-# Ignore configurations
-application.properties
-application.yml
-
 # Ignore environment profiles
-application-*.properties
-application-*.yml
-
+application-prod.properties
+application-prod.yml
