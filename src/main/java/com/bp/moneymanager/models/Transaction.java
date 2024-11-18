@@ -1,5 +1,6 @@
-package com.bp.moneymanager.persistence.entity;
+package com.bp.moneymanager.models;
 
+import com.bp.moneymanager.enums.TransactionType;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -23,7 +24,7 @@ public class Transaction {
     private Double balance;
 
     @ManyToOne
-    @JoinColumn(name = "account_number", insertable = false, updatable = false)
+    @JoinColumn(name = "account_number")
     private Account account;
 
     public Long getId() {
@@ -64,5 +65,13 @@ public class Transaction {
 
     public void setBalance(Double balance) {
         this.balance = balance;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
