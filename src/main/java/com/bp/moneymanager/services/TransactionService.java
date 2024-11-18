@@ -22,7 +22,9 @@ public class TransactionService {
             }
         }
         // Update balance
-        transaction.getAccount().setInitialBalance(transaction.getAccount().getInitialBalance() + transaction.getAmount());
+        double balance = transaction.getAccount().getInitialBalance() + transaction.getAmount();
+        transaction.setBalance(balance);
+        transaction.getAccount().setInitialBalance(balance);
         return transactionRepository.save(transaction);
     }
 

@@ -15,9 +15,6 @@ public class TransactionRequestDto {
     @NotNull(message = "Amount is required")
     private Double amount;
 
-    @NotNull(message = "Balance is required")
-    private Double balance;
-
     @NotNull(message = "Account number is required")
     private Long accountNumber;
 
@@ -43,14 +40,6 @@ public class TransactionRequestDto {
 
     public void setAmount(Double amount) {
         this.amount = amount;
-    }
-
-    public Double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(Double balance) {
-        this.balance = balance;
     }
 
     public Long getAccountNumber() {
