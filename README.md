@@ -3,7 +3,7 @@
 ## Description
 
 This is a simple money manager app that allows you to keep track of your expenses and incomes. You can add, edit and delete transactions. The app also provides a summary of your total balance, total expenses and total incomes.
-This is the result of the resolution of the challenge proposed by the challenge for BP.
+This is the result of the resolution of the challenge proposed by BP.
 
 ## Technologies
 
