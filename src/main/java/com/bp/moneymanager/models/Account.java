@@ -1,5 +1,6 @@
-package com.bp.moneymanager.persistence.entity;
+package com.bp.moneymanager.models;
 
+import com.bp.moneymanager.enums.AccountType;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class Account {
     private List<Transaction> transactions;
 
     @ManyToOne
-    @JoinColumn(name = "client_id", insertable = false, updatable = false)
+    @JoinColumn(name = "client_id")
     private Client client;
 
     public Long getAccountNumber() {
@@ -58,5 +59,21 @@ public class Account {
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 }
