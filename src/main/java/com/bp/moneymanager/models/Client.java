@@ -1,8 +1,6 @@
-package com.bp.moneymanager.persistence.entity;
+package com.bp.moneymanager.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -16,6 +14,16 @@ public class Client extends Person{
 
     @OneToMany(mappedBy = "client")
     private List<Account> accounts;
+
+    public Client() {
+    }
+
+    public Client(String password, Boolean status, List<Account> accounts) {
+        super();
+        this.password = password;
+        this.status = status;
+        this.accounts = accounts;
+    }
 
     public String getPassword() {
         return password;
@@ -31,5 +39,13 @@ public class Client extends Person{
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
     }
 }
